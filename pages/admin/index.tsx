@@ -4,19 +4,21 @@ import { Header } from '../../Components/Header';
 
 const Admin = () => {
 
+    const routes = [
+        {
+            href: "/admin/projects",
+            name: 'Projects'
+        },
+        {
+            href: "/admin/users",
+            name: 'Users'
+        }
+    ]
+
     return (
-    <div>
-        <Header>
-            <ul>
-                <li>
-                    <Link href="/admin/projects">Projects</Link>
-                </li>
-                <li>
-                    <Link href="/admin/users">Users</Link>
-                </li>
-            </ul>
-        </Header>
-    </div>
+        <div>
+            <Header items={routes} />
+        </div>
     )
 }
 

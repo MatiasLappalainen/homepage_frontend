@@ -13,7 +13,7 @@ const Header = ({items}: HeaderType) => {
         <div className="header">
             <ul>
             {items.map(({href, name}) => (
-                <li><Link href={href}>{name}</Link></li>
+                <li className="header-item"><Link href={href}>{name}</Link></li>
             ))}
             </ul>
         <style jsx>{`
@@ -24,6 +24,18 @@ const Header = ({items}: HeaderType) => {
                 width: 100%;
                 height: 80px;
                 background-color: #ddd
+            }
+
+            ul {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                align-items: center;
+            }
+
+            li {
+                display: inline;
+                margin: 10px;
             }
         `}</style>
         </div>
